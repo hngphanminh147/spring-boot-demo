@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <title>Profile</title>
+
+    <link th:href="@{/css/bootstrap.css}" rel="stylesheet">
+    <script th:href="@{/js/bootstrap.js}"></script>
+
+</head>
+<body>
+<ul>
+    <li th:each="attr : ${list}">
+        name: <span th:text="*{attr.name}"></span>,
+        address: <span th:text="*{attr.addr}"></span>,
+        lv: <span th:text="*{attr.lv}"></span>
+    </li>
+</ul>
+</body>
+</html>
